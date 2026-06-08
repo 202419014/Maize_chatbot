@@ -9,4 +9,4 @@ Pillow
 gTTS
 SpeechRecognition
 deep-translator
-huggingface_hub
+huggingface-hub
