@@ -60,6 +60,20 @@ def is_maize(image):
     print(f"Maize score: {maize_score:.2f} | Non-maize score: {non_maize_score:.2f}")
     return maize_score > non_maize_score and maize_score > 0.35
 
+import gdown
+import os
+
+os.makedirs("models", exist_ok=True)
+
+if not os.path.exists("models/maize_check_model.pth"):
+    gdown.download("https://drive.google.com/uc?id=1z6HDhi2jB59cDmcncut1rqxl0or9eCNg", "models/maize_check_model.pth", quiet=False)
+
+if not os.path.exists("models/maize_disease_model.pth"):
+    gdown.download("https://drive.google.com/uc?id=1k727yTOBtOLosOzDUhRBfrTq0HYeB-Ej", "models/maize_disease_model.pth", quiet=False)
+
+if not os.path.exists("models/maize_pest_model.pth"):
+    gdown.download("https://drive.google.com/uc?id=15T6JUZ8JZ_Ydx3Q09W8lQVatnH9MNx4B", "models/maize_pest_model.pth", quiet=False)
+    
 def load_models():
     disease_model = models.resnet18(weights=None)
     disease_model.fc = nn.Linear(disease_model.fc.in_features, len(disease_classes) )
