@@ -1,0 +1,12 @@
+streamlit
+torch
+torchvision
+transformers
+sentence-transformers
+pandas
+scikit-learn
+Pillow
+gTTS
+SpeechRecognition
+deep-translator
+huggingface_hub
