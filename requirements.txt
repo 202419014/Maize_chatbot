@@ -10,3 +10,4 @@ gTTS
 SpeechRecognition
 deep-translator
 huggingface-hub
+gdown
