@@ -1,7 +1,5 @@
 from huggingface_hub import HfApi, login
 
-login(token="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")  # ← paste your token here
-
 api = HfApi()
 
 api.upload_file(
